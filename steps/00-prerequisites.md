@@ -2,14 +2,45 @@
 
 > ก่อนสร้าง Oracle ต้องมีเครื่องมือพร้อมก่อน
 
-## สิ่งที่ต้องมี
+## เลือก OS ของคุณ
+
+| OS | สถานะ | คู่มือ |
+|----|--------|--------|
+| **macOS** | รองรับเต็มที่ | [Setup macOS](00b-setup-mac.md) |
+| **Windows** | ต้องใช้ผ่าน WSL | [Setup Windows (WSL)](00a-setup-windows.md) |
+| **Linux** | รองรับเต็มที่ | ดูด้านล่าง |
+
+### Windows สำคัญ!
+
+Oracle ทำงานบน **Linux/Unix environment** — Windows ตรงๆ ใช้ไม่ได้
+
+ต้องติดตั้ง **WSL (Windows Subsystem for Linux)** ก่อน:
+```powershell
+# เปิด PowerShell (Admin) แล้วพิมพ์:
+wsl --install
+```
+
+อ่าน [Setup Windows (WSL)](00a-setup-windows.md) ทำตาม step by step
+
+### macOS
+
+ติดตั้งง่ายมาก — ใช้ Homebrew:
+```bash
+brew install git gh tmux
+```
+
+อ่าน [Setup macOS](00b-setup-mac.md) ถ้าต้องการรายละเอียด
+
+---
+
+## สิ่งที่ต้องมี (ทุก OS)
 
 ### 1. Claude Code (AI Agent)
 
 Claude Code คือ CLI ของ Anthropic — AI agent ที่ทำงานใน terminal ได้
 
 ```bash
-# ติดตั้ง
+# ต้องมี Node.js ก่อน
 npm install -g @anthropic-ai/claude-code
 
 # ทดสอบ
@@ -23,7 +54,6 @@ claude --version
 Oracle ecosystem ใช้ Bun เป็นหลัก — เร็วกว่า Node.js มาก
 
 ```bash
-# ติดตั้ง
 curl -fsSL https://bun.sh/install | bash
 
 # ทดสอบ
@@ -37,15 +67,10 @@ bun --version
 git --version
 
 # GitHub CLI
-# macOS
-brew install gh
+# macOS: brew install gh
+# Linux: ดู https://cli.github.com/
 
-# Linux
-# ดู https://cli.github.com/
-```
-
-Login GitHub:
-```bash
+# Login
 gh auth login
 ```
 
@@ -68,10 +93,11 @@ claude --version   # Claude Code
 bun --version      # Bun runtime
 git --version      # Git
 gh --version       # GitHub CLI
+node --version     # Node.js
 tmux -V            # tmux (optional)
 ```
 
-ถ้าทุกอย่างพร้อม → ไปต่อ
+ถ้าทุกอย่างผ่าน → ไปต่อ
 
 ## Structure ที่แนะนำ
 

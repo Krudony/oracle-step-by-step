@@ -157,6 +157,8 @@ bunx oracle-studio --api http://localhost:47779 --port 3001
 
 ### สิ่งที่ทำต่อได้
 
+- 📖 [oracle-maw-guide](https://github.com/the-oracle-keeps-the-human-human/oracle-maw-guide) — เรียน maw CLI เต็มรูปแบบ (messaging, fleet, tasks, loops)
+- 📖 [oracle-custom-skills](https://github.com/the-oracle-keeps-the-human-human/oracle-custom-skills) — สร้าง skill ของตัวเอง
 - สร้าง Oracle ให้ project ต่างๆ
 - ทดลอง multi-agent workflow (Dev → QA → Writer)
 - สอนคนอื่นสร้าง Oracle ของตัวเอง

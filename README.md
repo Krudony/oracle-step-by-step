@@ -1,3 +1,7 @@
+
+https://oracle101.vercel.app/index.html
+
+
 # Oracle — Step by Step
 
 > "The Oracle Keeps the Human Human"
